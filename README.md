@@ -1,0 +1,2 @@
+# FlaskScrapper
+Job web scrapper
