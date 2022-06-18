@@ -3,7 +3,6 @@ from scrapper import get_jobs
 app = Flask("SuperScrapper")
 from exporter import save_to_file
 
-
 db = {}
 
 @app.route("/")
