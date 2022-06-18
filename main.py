@@ -14,13 +14,14 @@ def home():
 @app.route("/report")
 def report():
   word = request.args.get('word')
+  location = request.args.get('loc')
   if word:
     word=word.lower()
     fromDb = db.get(word)   
     if fromDb:
       jobs = fromDb
     else:
-      jobs = get_jobs(word)
+      jobs = get_jobs(word,location)
       db[word] = jobs
   else:
     return redirect("/")

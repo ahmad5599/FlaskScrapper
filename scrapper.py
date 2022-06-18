@@ -49,8 +49,8 @@ def extract_jobs(last_page,url):
     
   return jobs
 
-def get_jobs(word):
-  url = f"https://pk.indeed.com/jobs?q={word}&l=Pakistan"
+def get_jobs(word,loc):
+  url = f"https://pk.indeed.com/jobs?q={word}&l={loc}"
   last_page = get_last_page(url)
   jobs = extract_jobs(last_page,url)
   return jobs
